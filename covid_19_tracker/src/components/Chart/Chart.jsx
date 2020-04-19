@@ -10,7 +10,6 @@ const Chart = () => {
     useEffect(() => {
         const fetchAPI = async () => {
             const data = await fetchDailyData();
-            console.log(data);
             setDailyData(data);
         }
         fetchAPI();
@@ -38,7 +37,7 @@ const Chart = () => {
     )
 
     return(
-        <div>
+        <div className={styles.container}>
             { lineChart }
         </div>
     )
